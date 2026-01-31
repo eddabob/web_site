@@ -1,66 +1,192 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We are together forever - Emma Wang</title>
     <style>
-        body {
-            background-size: cover;
-            background-repeat: no-repeat;
-            color: white;
-            font-size: 20px;
-        }
-        a:link {
-                color: red;
-            }
-        h1 {
-            font-size: 3em;
-        }
-        h2 {
-            font-size: 2em;
-        }
-        html, body {
-            height: 100%;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        #container {
-            height: 100%;
-            border-collapse: collapse;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #ffe8e8 0%, #f5d5d5 100%);
         }
-        #padding {
-            height: 100px;
+
+        /* Floating Navigation Banner */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(178, 34, 34, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        #description {
-            width: 600px;
-            font-size: larger;
+
+        nav h1 {
+            font-size: 1.8rem;
+            color: #ffb3b3;
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            background: rgba(255, 179, 179, 0.1);
+        }
+
+        nav a:hover {
+            color: #ffb3b3;
+            background: rgba(255, 179, 179, 0.2);
+        }
+
+        main {
+            margin-top: 80px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2rem;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            color: #c41e3a;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 0.8rem;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background: #c41e3a;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #8b0000;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav h1 {
+                margin-right: 0;
+                font-size: 1.5rem;
+            }
+
+            main {
+                margin-top: 120px;
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            nav h1 {
+                font-size: 1.3rem;
+            }
+
+            main {
+                margin-top: 100px;
+                padding: 0.8rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+                text-align: left;
+            }
+
+            .back-link {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
-    <title>Emma's music journey as a young musician</title>
 </head>
-<body background="profile.jpg">
+<body>
+    <!-- Floating Navigation Banner -->
+    <nav>
+        <h1>Emma Wang</h1>
+        <a href="index.html">← Back to Home</a>
+    </nav>
 
-    <table id="container">
-        <tr>
-            <td valign="top">
-                <div id="main">
-                    <h1>Description</h1>
-                    <p id="description">
-                    I was inspired to write this composition when our
-                     small prep school had been closed down due to 
-                     unbearable VATS, and I was only in Year 5. 
-                     I thought of all the lost opportunities as a 
-                     year 6 for my final year in my treasured school. 
-                     So the feeling of loss for me and my friends was 
-                     overwhelming and bittersweet. So I wanted to 
-                     express this through music- as that was, for me, 
-                     the strongest way to do it- and so I wrote 
-                     "We are together forever" to express the bond 
-                     we had as a class; now, I thought that a short 
-                     extract of this piece would be a fitting ringtone 
-                     to remind us of our friendship and the good times 
-                     we had together.
-                    </p>
-                </div>
-            </td>
-        </tr>
-    </table>
+    <main>
+        <div class="container">
+            <h1>We are together forever</h1>
+            <p>
+                I was inspired to write this composition when our small prep school had been closed down due to 
+                unbearable VATS, and I was only in Year 5. I thought of all the lost opportunities as a 
+                year 6 for my final year in my treasured school. So the feeling of loss for me and my friends was 
+                overwhelming and bittersweet. So I wanted to express this through music— as that was, for me, 
+                the strongest way to do it— and so I wrote "We are together forever" to express the bond 
+                we had as a class; now, I thought that a short extract of this piece would be a fitting ringtone 
+                to remind us of our friendship and the good times we had together.
+            </p>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </main>
 
 </body>
 </html>
